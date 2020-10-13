@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Control</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport"  content="width=device-width,initial-s">
+
+    <link href="https://fonts.google.com/">
+
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="user.css">
+  <link rel="stylesheet" type="text/css" href="f.css">
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+  <nav id="mainNavbar" class="navbar navbar-dark  navbar-expand-md py-0 fixed-top">
+    <a href="file:///Users/aksharajagtap/Desktop/project/user.html" class="navbar-brand"> <img src="assets/images/logo.png" alt="Smart Home" /></a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navlinks" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span> 
+       </button>
+<div class="collapse navbar-collapse" id="navlinks">
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a href="file:///Users/aksharajagtap/Desktop/project/user.html" class="nav-link">Home</a>
+  </li>
+ 
+  
+  
+  </ul>
+
+
+  </div>
+  </nav>
+
+<!-- <h2>The management system of Smart home</h2>
+<p>Choose the operation from menu:</p> -->
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openNav(event, 'Light')" id="defaultOpen"><i class="fa fa-lightbulb" style="color:black"></i> Light</button>
+  <button class="tablinks" onclick="openNav(event, 'Temperature')"><i class="fas fa-thermometer-half" style="color:black"></i> Heater </button>
+  <button class="tablinks" onclick="openNav(event, 'Appliances')"><i class="fas fa-cog" style="color:black"></i> Appliances</button>
+  <button class="tablinks" onclick="openNav(event, 'Statistics')"><i class="fas fa-chart-line" style="color:black"></i> Statistics</button>
+</div>
+
+<div id="Light" class="tabcontent">
+  <h3>Light</h3>
+  <div class="wrapper">
+    <span class="card">
+      <img src="images/livRoom.jpeg" alt="Living Room" >
+      <br>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </span>
+    <span class="card">
+      <img src="images/bedRoom.jpeg" alt="bedRoom">
+      <br>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </span>
+  </div>
+</div>
+
+<div id="Temperature" class="tabcontent">
+  <h3>Temperature</h3>
+  <div class="wrapper">
+    <span class="card">
+      <img src="images/livRoom.jpeg" alt="Living Room" >
+      <br>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </span>
+    <span class="card">
+      <img src="images/bedRoom.jpeg" alt="bedRoom">
+      <br>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </span>
+  </div>
+</div>
+
+<div id="Appliances" class="tabcontent">
+  <h3>Appliances</h3>
+      <div class="wrapper">
+
+       <span class="cardAppliances">
+        <i class="fas fa-tv" style="font-size: 3.75em; margin-bottom: 10px"></i>
+        <br>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </span>
+
+      <span class="cardAppliances">
+
+<i class="fas fa-user-shield" style="font-size: 3.75em; margin-bottom: 10px"></i>
+        <br>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </span>
+<br>
+      <span class="cardAppliances">
+        <i class="fas fa-video" style="font-size: 3.75em; margin-bottom: 10px"></i>
+        <br>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round" ></span>
+        </label>
+      </span>
+      </div>
+</div>
+
+<div id="Statistics" class="tabcontent">
+  <div class="wrapper">
+
+  <span class="cardStatistic">
+      <canvas id="myChart"></canvas>
+      <script type="text/javascript">
+
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'Living room Temperature',
+                backgroundColor: 'rgb(255, 99, 132, 0.8',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [28, 25, 28, 22, 22, 18, 22]
+            }]
+        },
+
+        // Configuration options go here
+        options: {}
+    });
+
+      </script>
+  </span>
+
+  <span class="cardStatistic">
+      <canvas id="myChart2"></canvas>
+      <script type="text/javascript">
+
+      var ctx = document.getElementById('myChart2').getContext('2d');
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'Bed room Temperature',
+                backgroundColor: 'rgb(66, 21, 236, 0.8',
+                borderColor: 'rgb(66, 21, 236)',
+                data: [28, 25, 28, 22, 22, 18, 22]
+            }]
+        },
+
+        // Configuration options go here
+        options: {}
+    });
+
+      </script>
+  </span>
+
+  </div>
+
+    <script>
+    function openNav(evt, Name) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(Name).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+
+</div>
+
+</body>
+</html>
